@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home-LearnDash Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- icon -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              background_landing:
+                "url('https://websitedemos.net/learndash-academy-02/wp-content/uploads/sites/457/2019/06/ld2.jpg')",
+            },
+            colors: {
+              slate_white: "#94a3b8",
+              magic_red: "#dc2626",
+              amber: "#f59e0b",
+              yellow: "#fde047",
+              navy_blue: "#0e0282",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-background_landing bg-cover bg-center">
+      <div class="bg-navy_blue bg-opacity-90 py-5 md:min-h-[100vh] min-h-[80vh]">
+        <nav
+          class="flex items-center md:justify-evenly justify-between w-[90%] mx-auto"
+        >
+          <div class="">
+            <img
+              class="w-400"
+              src="https://websitedemos.net/learndash-academy-02/wp-content/uploads/sites/457/2019/06/learn-dash-white-logo.svg"
+              alt="Logo"
+            />
+          </div>
+          <div
+            class="navbar-links md:static absolute top-[-100%] left-0 md:w-auto w-full flex items-center md:bg-transparent bg-white md:text-white text-black md:font-semibold"
+          >
+            <ul
+              class="flex md:flex-row flex-col md:items-center gap-[2vh] md:py-0 py-3 md:w-auto w-[1000vh]"
+            >
+              <li class="md:px-0 px-5 md:text-none text-blue">
+                <a href="#">Home</a>
+              </li>
+              <hr class="md:w-[100%] md:hidden" />
+              <li class="md:px-0 px-5"><a href="#">All Courses</a></li>
+              <hr class="md:w-[100%] md:hidden" />
+              <li class="md:px-0 px-5"><a href="#">About</a></li>
+              <hr class="md:w-[100%] md:hidden" />
+              <li class="md:px-0 px-5"><a href="#">Contact</a></li>
+              <hr class="md:w-[100%] md:hidden" />
+              <li class="md:px-0 px-5"><a href="#">My Account</a></li>
+            </ul>
+          </div>
+          <div
+            class="md:hidden flex bg-white h-[5vh] rounded items-center"
+          >
+            <ion-icon
+              onclick="toggle_navbar(this)"
+              name="menu"
+              class="md:hidden text-3xl cursor-pointer"
+            ></ion-icon>
+          </div>
+        </nav>
+        <div class="bg-white px-3 py-2 absolute top-[30%] right-0 cursor-pointer flex items-center"><ion-icon name="color-palette" class="p-1 text-navy_blue opacity-80"></ion-icon>Customize</div>
+        <section class="flex flex-col gap-[2vh] relative md:mt-[13%] mt-[10%] items-center text-white">
+            <div class="md:text-5xl text-3xl font-bold ">Learn from Industry Experts</div>
+            <p class="md:w-[60%] w-[80%]">Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, sit aperiam quae velit officia</p>
+            <button class="rounded-l-[40px] rounded-r-[40px]  w-auto px-5 py-2 text-navy_blue bg-white hover:bg-slate_white">View All Courses</button>
+        </section>
+        
+        <div class=" bg-none absolute md:left-[15%] left-[2%] top-[90%] flex items-center w-[90%]">
+            <div class="relative bg-white flex flex-col items-center h-auto  mx-3 md:mx-7 w-[25%] px-4 rounded-[5px]">
+                <ion-icon name="laptop" class="text-4xl text-navy_blue my-3"></ion-icon>
+                <div class="text-2xl font-bold w-auto">Actionable Training</div>
+                <div class="text-1xl w-auto md:p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            </div>
+            <div class="relative bg-white flex flex-col items-center h-auto  mx-3 w-[25%] px-4 rounded-[5px]">
+                <ion-icon name="book" class="text-4xl text-navy_blue my-3"></ion-icon>
+                <div class="text-2xl font-bold w-auto">Interesting Quizes</div>
+                <div class="text-1xl w-auto md:p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            </div>
+            <div class="relative bg-white flex flex-col items-center h-auto  mx-3 w-[25%] px-4 rounded-[5px]">
+                <ion-icon name="cube" class="text-4xl text-navy_blue my-3"></ion-icon>
+                <div class="text-2xl font-bold w-auto">Actionable Training</div>
+                <div class="text-1xl w-auto md:p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            </div>
+            
+        </div>
+      </div>
+    </header>
+  </body>
+  <script>
+    const navlink = document.querySelector(".navbar-links");
+    function toggle_navbar(e) {
+      e.name = e.name === "menu" ? "close" : "menu";
+      navlink.classList.toggle("top-[15%]");
+    }
+  </script>
+</html>
