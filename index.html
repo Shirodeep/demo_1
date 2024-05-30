@@ -15,7 +15,7 @@
               background_landing: "url('./images/background_landing.jpg')",
             },
             colors: {
-              blue: '#0d68ae',
+              blue: "#0d68ae",
               slate_white: "#94a3b8",
               magic_red: "#dc2626",
               amber: "#f59e0b",
@@ -59,7 +59,9 @@
             <ul
               class="flex md:flex-row flex-col md:items-center gap-[2vh] md:py-0 py-3 md:w-auto w-[1000vh] z-50"
             >
-              <li class="md:px-0 px-5 md:text-none md:text-white text-navy_blue ">
+              <li
+                class="md:px-0 px-5 md:text-none md:text-white text-navy_blue"
+              >
                 <a class="" href="#">Home</a>
               </li>
               <hr class="md:w-[100%] md:hidden" />
@@ -138,14 +140,16 @@
         </div>
       </div>
     </div>
-    <!-- floating button  -->
-   
+
+
     <!-- most popular course section  -->
     <div
       class="relative mt-[20vh] w-full flex flex-col items-center text-black"
     >
       <div class="flex flex-col items-center">
-        <div class="text-3xl font-bold md:px-5  mx-[150px] text-center">Our Most Popular Courses</div>
+        <div class="text-3xl font-bold md:px-5 mx-[150px] text-center">
+          Our Most Popular Courses
+        </div>
         <p class="m-5 p-3 text-center w-[50%]">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
           excepturi cupiditate harum Lorem ipsum dolor sit amet, consectetur
@@ -211,20 +215,71 @@
           <img src="./images/CEO.png" class="p-5" />
           <p class="text-center font-bold">Dr. John Smith — Founder & CEO.</p>
         </div>
-        <div class="text-descrip"></div>
+        <div class="text-descrip">
+          <section class="text-gray-700">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="flex flex-wrap mx-2">
+                <div class="w-full px-4 pt-2">
+                  <details class=" bg-white px-4 pt-2">
+                    <summary
+                      class="font-semibold bg-white py-2"
+                    >
+                      How Long is this site live?
+                      <hr class="m-4">
+                    </summary>
+
+                    <span >
+                      Laboris qui labore cillum culpa in sunt quis sint veniam.
+                      Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+                      minim velit nostrud pariatur culpa magna in aute.
+                    </span>
+                  </details>
+                  <details class=" bg-white px-4 pt-2">
+                    <summary
+                      class="font-semibold bg-white py-2"
+                    >
+                      How Long is this site live?
+                      <hr class="m-4">
+                    </summary>
+
+                    <span >
+                      Laboris qui labore cillum culpa in sunt quis sint veniam.
+                      Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+                      minim velit nostrud pariatur culpa magna in aute.
+                    </span>
+                  </details>
+                  <details class=" bg-white px-4 pt-2">
+                    <summary
+                      class="font-semibold bg-white py-2"
+                    >
+                      How Long is this site live?
+                      <hr class="m-4">
+                    </summary>
+
+                    <span >
+                      Laboris qui labore cillum culpa in sunt quis sint veniam.
+                      Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
+                      minim velit nostrud pariatur culpa magna in aute.
+                    </span>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
     <!-- industry partner section  -->
     <div
       class="grid md:grid-cols-6 grid-cols-2 gap-3 justify-evenly items-center w-[90%] mx-auto p-[50px] mt-[40px] mb-[40px] text-center"
     >
+      <div
+        class="md:col-span-1 flex flex-row gap-[30px] items-center text-center mx-auto md:text-1xl text-2xl font-semibold w-auto col-span-2 text-center"
+      >
+        Industry Partners
+        <div class="w-[1px] h-[130px] bg-black md:visible invisible"></div>
+      </div>
 
-        <div class="md:col-span-1 flex flex-row gap-[30px] items-center text-center mx-auto md:text-1xl text-2xl font-semibold w-auto col-span-2 text-center">
-          Industry Partners
-          <div class="w-[1px] h-[130px] bg-black md:visible invisible"></div>
-        </div>
-        
-    
       <img src="./images/logo-1.svg" alt="" class="ml-5" />
       <img src="./images/logo2.svg" alt="" class="ml-5" />
       <img src="./images/logo3.svg" alt="" class="ml-5" />
@@ -332,17 +387,18 @@
         </button>
       </footer>
       <hr class="mt-12 mb-12 w-full" />
-      <div class="text-white text-center mt-3 pb-12">Copyright &copy; 2024 LearnDash Academy</div>
+      <div class="text-white text-center mt-3 pb-12">
+        Copyright &copy; 2024 LearnDash Academy
+      </div>
     </div>
+
+    <!-- floating button  -->
     <div
-    class="bg-white px-3 py-2 fixed top-[30%] right-0 cursor-pointer flex items-center hover:bg-blue text-black hover:text-white z-100 shadow-2xl"
-  >
-    <ion-icon
-      name="color-palette"
-      class="p-1 opacity-[80%]"
-    ></ion-icon
-    >Customize
-  </div>
+      class="bg-white px-3 py-2 fixed top-[30%] right-0 cursor-pointer flex items-center hover:bg-blue text-black hover:text-white z-100 shadow-2xl"
+    >
+      <ion-icon name="color-palette" class="p-1 text-blue hover:text-white opacity-[80%]"></ion-icon
+      >Customize
+    </div>
   </body>
   <script>
     const navlink = document.querySelector(".navbar-links");
