@@ -12,10 +12,10 @@
         theme: {
           extend: {
             backgroundImage: {
-              background_landing:
-                "url('https://websitedemos.net/learndash-academy-02/wp-content/uploads/sites/457/2019/06/ld2.jpg')",
+              background_landing: "url('./images/background_landing.jpg')",
             },
             colors: {
+              blue: '#0d68ae',
               slate_white: "#94a3b8",
               magic_red: "#dc2626",
               amber: "#f59e0b",
@@ -29,12 +29,20 @@
     <style>
       body {
         overflow-x: hidden;
+        background-color: whitesmoke;
+      }
+      .sticky {
+        position: fixed;
       }
     </style>
   </head>
   <body>
-    <header class="bg-background_landing bg-cover bg-center">
-      <div class="bg-navy_blue bg-opacity-90 py-5 md:min-h-[100vh] min-h-[80vh]">
+    <!-- landing page  -->
+    <div class="bg-background_landing bg-cover bg-center">
+      <div
+        class="relative bg-blue bg-opacity-90 py-5 md:min-h-[100vh] min-h-[80vh]"
+      >
+        <!-- navbar  -->
         <nav
           class="flex items-center md:justify-evenly justify-between w-[90%] mx-auto"
         >
@@ -49,10 +57,10 @@
             class="navbar-links md:static absolute top-[-100%] left-0 md:w-auto w-full flex items-center md:bg-transparent bg-white md:text-white text-black md:font-semibold"
           >
             <ul
-              class="flex md:flex-row flex-col md:items-center gap-[2vh] md:py-0 py-3 md:w-auto w-[1000vh]"
+              class="flex md:flex-row flex-col md:items-center gap-[2vh] md:py-0 py-3 md:w-auto w-[1000vh] z-50"
             >
-              <li class="md:px-0 px-5 md:text-none text-blue">
-                <a href="#">Home</a>
+              <li class="md:px-0 px-5 md:text-none md:text-white text-navy_blue ">
+                <a class="" href="#">Home</a>
               </li>
               <hr class="md:w-[100%] md:hidden" />
               <li class="md:px-0 px-5"><a href="#">All Courses</a></li>
@@ -64,9 +72,7 @@
               <li class="md:px-0 px-5"><a href="#">My Account</a></li>
             </ul>
           </div>
-          <div
-            class="md:hidden flex bg-white h-[5vh] rounded items-center"
-          >
+          <div class="md:hidden flex bg-white h-[5vh] rounded items-center">
             <ion-icon
               onclick="toggle_navbar(this)"
               name="menu"
@@ -74,33 +80,269 @@
             ></ion-icon>
           </div>
         </nav>
-        <div class="bg-white px-3 py-2 absolute top-[30%] right-0 cursor-pointer flex items-center"><ion-icon name="color-palette" class="p-1 text-navy_blue opacity-80"></ion-icon>Customize</div>
-        <section class="flex flex-col gap-[2vh] relative md:mt-[13%] mt-[10%] items-center text-white">
-            <div class="md:text-5xl text-3xl font-bold ">Learn from Industry Experts</div>
-            <p class="md:w-[60%] w-[80%]">Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, sit aperiam quae velit officia</p>
-            <button class="rounded-l-[40px] rounded-r-[40px]  w-auto px-5 py-2 text-navy_blue bg-white hover:bg-slate_white">View All Courses</button>
+        <!-- hero section  -->
+        <section
+          class="flex flex-col gap-[2vh] relative md:mt-[13%] mt-[10%] items-center text-white"
+        >
+          <div class="md:text-5xl text-3xl font-bold">
+            Learn from Industry Experts
+          </div>
+          <p class="md:w-[60%] w-[80%] text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum
+            dolor sit amet consectetur, adipisicing elit. Dignissimos, sit
+            aperiam quae velit officia
+          </p>
+          <button
+            class="rounded-l-[40px] rounded-r-[40px] w-auto px-5 mt-[50px] py-2 text-blue bg-white hover:bg-slate_white"
+          >
+            View All Courses
+          </button>
         </section>
-        
-        <div class=" bg-none absolute md:left-[15%] left-[2%] top-[90%] flex items-center w-[90%]">
-            <div class="relative bg-white flex flex-col items-center h-auto  mx-3 md:mx-7 w-[25%] px-4 rounded-[5px]">
-                <ion-icon name="laptop" class="text-4xl text-navy_blue my-3"></ion-icon>
-                <div class="text-2xl font-bold w-auto">Actionable Training</div>
-                <div class="text-1xl w-auto md:p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-            </div>
-            <div class="relative bg-white flex flex-col items-center h-auto  mx-3 w-[25%] px-4 rounded-[5px]">
-                <ion-icon name="book" class="text-4xl text-navy_blue my-3"></ion-icon>
-                <div class="text-2xl font-bold w-auto">Interesting Quizes</div>
-                <div class="text-1xl w-auto md:p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-            </div>
-            <div class="relative bg-white flex flex-col items-center h-auto  mx-3 w-[25%] px-4 rounded-[5px]">
-                <ion-icon name="cube" class="text-4xl text-navy_blue my-3"></ion-icon>
-                <div class="text-2xl font-bold w-auto">Actionable Training</div>
-                <div class="text-1xl w-auto md:p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-            </div>
-            
+      </div>
+    </div>
+    <!-- card section  -->
+    <div
+      class="relative md:mt-[-70px] mt-[-65px] grid md:grid-cols-3 gap-[40px] md:w-[80%] w-[95%] sm:grid-cols-1 mx-auto"
+    >
+      <div
+        class="bg-white flex flex-col items-center md:pb-5 pb-[3vh] h-auto mx-auto w-[100%] md:px-4 pt-2 rounded-[5px] shadow-2xl"
+      >
+        <ion-icon name="laptop" class="text-4xl text-blue my-4"></ion-icon>
+        <div class="text-2xl font-semibold w-auto text-center">
+          Actionable Training
+        </div>
+        <div class="text-0xl w-auto md:p-3 p-2 text-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </div>
       </div>
-    </header>
+      <div
+        class="bg-white flex flex-col items-center md:pb-5 pb-[3vh] h-auto mx-auto w-[100%] md:px-4 pt-2 rounded-[5px] shadow-2xl"
+      >
+        <ion-icon name="laptop" class="text-4xl text-blue my-4"></ion-icon>
+        <div class="text-2xl font-semibold w-auto text-center">
+          Actionable Training
+        </div>
+        <div class="text-0xl w-auto md:p-3 p-2 text-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+      </div>
+      <div
+        class="bg-white flex flex-col items-center md:pb-5 pb-[3vh] h-auto mx-auto w-[100%] md:px-4 pt-2 rounded-[5px] shadow-2xl"
+      >
+        <ion-icon name="laptop" class="text-4xl text-blue my-4"></ion-icon>
+        <div class="text-2xl font-semibold w-auto text-center">
+          Actionable Training
+        </div>
+        <div class="text-0xl w-auto md:p-3 p-2 text-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+      </div>
+    </div>
+    <!-- floating button  -->
+   
+    <!-- most popular course section  -->
+    <div
+      class="relative mt-[20vh] w-full flex flex-col items-center text-black"
+    >
+      <div class="flex flex-col items-center">
+        <div class="text-3xl font-bold md:px-5  mx-[150px] text-center">Our Most Popular Courses</div>
+        <p class="m-5 p-3 text-center w-[50%]">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
+          excepturi cupiditate harum Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Eos itaque sit nesciunt placeat quaerat eligendi
+          ipsa illum facilis, ducimus corporis, voluptates voluptas repellendus
+          magni in expedita fugiat quidem fuga officiis?
+        </p>
+      </div>
+      <div
+        class="m-4 relative grid md:grid-cols-3 grid-cols-1 gap-10 p-2 w-[90%] mx-auto"
+      >
+        <div class="flex flex-col bg-white border-[1px] md:w-auto w-[70%]">
+          <img src="./images/card_img.jpg" alt="" class="w-full" />
+          <div class="font-bold text-2xl p-3 pl-5">Social media marketing</div>
+          <p class="font-0xl text-left pr-3 pl-5">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+          <button
+            class="m-4 text-center bg-blue rounded-l-[4px] rounded-r-[4px] px-2 py-1 text-white"
+          >
+            See more...
+          </button>
+        </div>
+        <div class="flex flex-col bg-white border-[1px] md:w-auto w-[70%]">
+          <img src="./images/image-next1.jpg" alt="" class="w-full" />
+          <div class="font-bold text-2xl p-3 pl-5">Social media marketing</div>
+          <p class="font-0xl text-left pr-3 pl-5">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+          <button
+            class="m-4 text-center bg-blue rounded-l-[4px] rounded-r-[4px] px-2 py-1 text-white"
+          >
+            See more...
+          </button>
+        </div>
+        <div class="flex flex-col bg-white border-[1px] md:w-auto w-[70%]">
+          <img src="./images/image-next.jpg" alt="" class="w-full" />
+          <div class="font-bold text-2xl p-3 pl-5">Social media marketing</div>
+          <p class="font-0xl text-left pr-3 pl-5">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+          <button
+            class="m-4 text-center bg-blue rounded-l-[4px] rounded-r-[4px] px-2 py-1 text-white"
+          >
+            See more...
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- founder CEO section  -->
+    <div class="relative m-3 mt-5">
+      <div class="md:text-3xl text-2xl font-semibold text-center">
+        Be in Demand with Our Professional Training
+      </div>
+      <p class="pt-4 text-center text-[13px]">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui tempore
+        doloribus error pariatur
+      </p>
+      <div
+        class="grid md:grid-cols-2 grid-cols-1 items-center gap-3 m-4 p-3 w-[90%] mx-auto"
+      >
+        <div>
+          <img src="./images/CEO.png" class="p-5" />
+          <p class="text-center font-bold">Dr. John Smith — Founder & CEO.</p>
+        </div>
+        <div class="text-descrip"></div>
+      </div>
+    </div>
+    <!-- industry partner section  -->
+    <div
+      class="grid md:grid-cols-6 grid-cols-2 gap-3 justify-evenly items-center w-[90%] mx-auto p-[50px] mt-[40px] mb-[40px] text-center"
+    >
+
+        <div class="md:col-span-1 flex flex-row gap-[30px] items-center text-center mx-auto md:text-1xl text-2xl font-semibold w-auto col-span-2 text-center">
+          Industry Partners
+          <div class="w-[1px] h-[130px] bg-black md:visible invisible"></div>
+        </div>
+        
+    
+      <img src="./images/logo-1.svg" alt="" class="ml-5" />
+      <img src="./images/logo2.svg" alt="" class="ml-5" />
+      <img src="./images/logo3.svg" alt="" class="ml-5" />
+      <img src="./images/logo4.svg" alt="" class="ml-5" />
+      <img src="./images/logo5.svg" alt="" class="ml-5" />
+    </div>
+    <!-- student have to say section -->
+    <div>
+      <div class="text-3xl font-bold text-center">
+        What Our Student Have to Say
+      </div>
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-7 p-5 md:w-[90%] mx-auto">
+        <div class="shadow-2xl p-5 rounded-1">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
+            quasi ipsa nobis velit labore consectetur facere eos fuga nisi
+            praesentium illo architecto sit mollitia minus commodi
+          </p>
+          <div class="flex flex-row items-center p-5">
+            <img
+              class="w-[60px] h-[60px] rounded-[50%]"
+              src="./images/student1.jpg"
+              alt=""
+            />
+            <div class="flex flex-col">
+              <div class="title text-black font-bold ml-2">Kelvin Black</div>
+              <div class="addr ml-2">from Dallas, USA</div>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-2xl p-5 rounded-1">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
+            quasi ipsa nobis velit labore consectetur facere eos fuga nisi
+            praesentium illo architecto sit mollitia minus commodi
+          </p>
+          <div class="flex flex-row items-center p-5">
+            <img
+              class="w-[60px] h-[60px] rounded-[50%]"
+              src="./images/student2.jpg"
+              alt=""
+            />
+            <div class="flex flex-col">
+              <div class="title text-black font-bold ml-2">Kelvin Black</div>
+              <div class="addr ml-2">from Dallas, USA</div>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-2xl p-5 rounded-1">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
+            quasi ipsa nobis velit labore consectetur facere eos fuga nisi
+            praesentium illo architecto sit mollitia minus commodi
+          </p>
+          <div class="flex flex-row items-center p-5">
+            <img
+              class="w-[60px] h-[60px] rounded-[50%]"
+              src="./images/student3.jpg"
+              alt=""
+            />
+            <div class="flex flex-col">
+              <div class="title text-black font-bold ml-2">Kelvin Black</div>
+              <div class="addr ml-2">from Dallas, USA</div>
+            </div>
+          </div>
+        </div>
+        <div class="shadow-2xl p-5 rounded-1">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
+            quasi ipsa nobis velit labore consectetur facere eos fuga nisi
+            praesentium illo architecto sit mollitia minus commodi
+          </p>
+          <div class="flex flex-row items-center p-5">
+            <img
+              class="w-[60px] h-[60px] rounded-[50%]"
+              src="./images/student4.jpg"
+              alt=""
+            />
+            <div class="flex flex-col">
+              <div class="title text-black font-bold ml-2">Kelvin Black</div>
+              <div class="addr ml-2">from Dallas, USA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer section  -->
+    <div class="bg-blue py-[45px] mt-[50px]">
+      <footer
+        class="w-[80%] mx-auto h-auto text-white items-center text-center"
+      >
+        <div class="text-4xl font-bold p-5 text-center">
+          Join Our 7452 Happy Students Today!
+        </div>
+        <div class="text-0xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+          blanditiis odio animi a obcaecati, rerum eos laudantium, tempore
+          recusandae sapiente itaque quo ipsam porro! Iure vel et aspernatur
+          perferendis quo!
+        </div>
+        <button
+          class="rounded-l-[40px] rounded-r-[40px] w-auto px-10 mt-[50px] py-3 text-blue bg-white hover:bg-slate_white"
+        >
+          Start Learning
+        </button>
+      </footer>
+      <hr class="mt-12 mb-12 w-full" />
+      <div class="text-white text-center mt-3 pb-12">Copyright &copy; 2024 LearnDash Academy</div>
+    </div>
+    <div
+    class="bg-white px-3 py-2 fixed top-[30%] right-0 cursor-pointer flex items-center hover:bg-blue text-black hover:text-white z-100 shadow-2xl"
+  >
+    <ion-icon
+      name="color-palette"
+      class="p-1 opacity-[80%]"
+    ></ion-icon
+    >Customize
+  </div>
   </body>
   <script>
     const navlink = document.querySelector(".navbar-links");
