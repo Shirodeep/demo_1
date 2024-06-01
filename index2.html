@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function toggleAnswer(id) {
+      const answer = document.getElementById(id);
+      const icon = document.getElementById(id + '-icon');
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        answer.classList.add('block');
+        icon.classList.add('rotate-180');
+      } else {
+        answer.classList.remove('block');
+        answer.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-2xl font-bold mb-6">Frequently Asked Questions</h1>
+    <div class="border-b border-gray-200 pb-4 mb-4">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer('answer1')">
+        <h2 class="text-xl font-semibold">What is Tailwind CSS?</h2>
+        <svg id="answer1-icon" class="h-6 w-6 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </div>
+      <div id="answer1" class="hidden mt-2 transition-all duration-300">
+        <p>Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.</p>
+      </div>
+    </div>
+    <div class="border-b border-gray-200 pb-4 mb-4">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer('answer2')">
+        <h2 class="text-xl font-semibold">How do I use Tailwind CSS?</h2>
+        <svg id="answer2-icon" class="h-6 w-6 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </div>
+      <div id="answer2" class="hidden mt-2 transition-all duration-300">
+        <p>You can use Tailwind CSS by including its CDN link in your project or by installing it via npm for more customization options.</p>
+      </div>
+    </div>
+    <div class="border-b border-gray-200 pb-4 mb-4">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleAnswer('answer3')">
+        <h2 class="text-xl font-semibold">Why should I use Tailwind CSS?</h2>
+        <svg id="answer3-icon" class="h-6 w-6 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </div>
+      <div id="answer3" class="hidden mt-2 transition-all duration-300">
+        <p>Tailwind CSS allows for quick styling, reduces the need for custom CSS, and promotes consistency across your application.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
